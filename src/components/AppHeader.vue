@@ -42,5 +42,8 @@ a {
   header {
   height: 95px;
   }
+  div {
+    margin: 0 10px;
+  }
 }
 </style>

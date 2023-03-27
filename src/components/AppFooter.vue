@@ -31,4 +31,9 @@ div {
 a {
   text-decoration: none;
 }
+@media screen and (max-width: 350px) {
+  div {
+    margin: 0 auto;
+  }
+}
 </style>

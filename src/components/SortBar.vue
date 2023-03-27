@@ -72,11 +72,8 @@ span {
   display: flex;
   margin-right: 5px;
 }
-span {
-  margin-right: -20px;
-}
 .sort-quantity {
-  margin-left: 15px;
+  margin: 0 10px;
 }
 }
 </style>
