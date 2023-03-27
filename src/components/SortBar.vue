@@ -26,6 +26,8 @@ const buttonTypes = {
   type1: 'Лодзь',
   type2: 'Торунь',
   type3: 'Гдыня',
+  type4: 'Гданьск',
+  type5: 'Грудзендз',
 };
 
 interface INum {
