@@ -1,22 +1,22 @@
 <template>
     <ul class="item-list">
-            <MovieCard
-              v-for="movie in props.movies"
-              :key="movie.id"
-              :id="movie.id"
-              :title="movie.title"
-              :date="movie.date"
-              :alt="movie.title"
-              :posterurl="movie.posterurl"
-              :description="movie.description"
-              :city="movie.city"
-              data-test="test-movie-card-list"/>
+            <PhotoCard
+              v-for="photo in props.photos"
+              :key="photo.id"
+              :id="photo.id"
+              :title="photo.title"
+              :date="photo.date"
+              :alt="photo.title"
+              :posterurl="photo.posterurl"
+              :description="photo.description"
+              :city="photo.city"
+              data-test="test-photo-card-list"/>
   </ul>
 </template>
 
 <script setup lang="ts">
 import { defineProps } from 'vue';
-import MovieCard from './MovieCard.vue';
+import PhotoCard from './PhotoCard.vue';
 
 interface IPhoto {
   date?: string,
@@ -27,7 +27,7 @@ interface IPhoto {
   city?: string,
 }
 interface PhotosProps {
-  movies: Array<IPhoto>
+  photos: Array<IPhoto>
 }
 
 const props = defineProps<PhotosProps>();

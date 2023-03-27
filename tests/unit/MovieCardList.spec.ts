@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
-import MovieCardsList from '@/components/MovieCardsList.vue';
+import MovieCardsList from '@/components/PhotoCardsList.vue';
 
 const movies = [{
   year: '1994',

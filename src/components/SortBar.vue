@@ -1,6 +1,6 @@
 <template>
   <div class="sort">
-    <div class="sort-quantity">{{ moviesFound }}</div>
+    <div class="sort-quantity">{{ photosFound }}</div>
     <div class="sort-buttons">
       <div><span>выбрать город</span></div>
       <RadioButtons :items="buttonTypes"
@@ -36,11 +36,11 @@ interface INum {
 
 const props = defineProps<INum>();
 
-const sortByValue = computed(() => store.state.movies.sortByValue);
+const sortByValue = computed(() => store.state.photos.sortByValue);
 
-const setSortByValue = (str: string) => store.commit('movies/setSortBy', str);
+const setSortByValue = (str: string) => store.commit('photos/setSortBy', str);
 
-const moviesFound = computed(() => ((props.quantity && props.quantity > 0 && props.quantity !== 122) ? `${props.quantity} фото найдено` : null));
+const photosFound = computed(() => ((props.quantity && props.quantity > 0 && props.quantity !== 122) ? `${props.quantity} фото найдено` : null));
 
 </script>
 

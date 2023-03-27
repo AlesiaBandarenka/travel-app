@@ -6,7 +6,7 @@ import key from '@/store';
 describe('unit tests for SortBar component', () => {
   const store = createStore({
     state: {
-      movies: {
+      photos: {
         sortByValue: 'type1',
       },
     },

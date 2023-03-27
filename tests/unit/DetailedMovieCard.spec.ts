@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
-import DetailedMovieCard from '@/components/DetailedMovieCard.vue';
+import DetailedMovieCard from '@/components/DetailedPhotoCard.vue';
 
 let wrapper: any;
 

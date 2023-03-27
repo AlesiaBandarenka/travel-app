@@ -1,9 +1,9 @@
 <template>
   <div class="wrapper">
     <AppHeader />
-  <SortBar :quantity="sortedMovies.length" />
+  <SortBar :quantity="sortedPhotos.length" />
     <div class="wrapper-list">
-      <MovieCardsList v-if="sortedMovies.length" :movies="sortedMovies"/>
+      <PhotoCardsList v-if="sortedPhotos.length" :photos="sortedPhotos"/>
       <NoFound v-else />
     </div>
   <AppFooter />
@@ -15,7 +15,7 @@ import AppHeader from '@/components/AppHeader.vue';
 import AppFooter from '@/components/AppFooter.vue';
 import SortBar from '@/components/SortBar.vue';
 import NoFound from '@/components/NoFound.vue';
-import MovieCardsList from '@/components/MovieCardsList.vue';
+import PhotoCardsList from '@/components/PhotoCardsList.vue';
 
 import { computed, onMounted } from 'vue';
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -23,10 +23,10 @@ import { useStore } from 'vuex';
 
 const store = useStore();
 
-const sortByValue = computed(() => store.state.movies.sortByValue);
+const sortByValue = computed(() => store.state.photos.sortByValue);
 
 onMounted(() => {
-  store.dispatch('movies/fetchPhotos');
+  store.dispatch('photos/fetchPhotos');
 });
 
 const filteredBy = (arr) => {
@@ -37,14 +37,18 @@ const filteredBy = (arr) => {
       return arr.filter((photo) => photo.city.toLowerCase() === 'торунь');
     case 'type3':
       return arr.filter((photo) => photo.city.toLowerCase() === 'гдыня');
+    case 'type4':
+      return arr.filter((photo) => photo.city.toLowerCase() === 'гданьск');
+    case 'type5':
+      return arr.filter((photo) => photo.city.toLowerCase() === 'грудзендз');
     default:
       return arr;
   }
 };
 
-const movies = computed(() => store.state.movies.all);
+const photos = computed(() => store.state.photos.all);
 
-const sortedMovies = computed(() => filteredBy(movies.value));
+const sortedPhotos = computed(() => filteredBy(photos.value));
 
 </script>
 

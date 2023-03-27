@@ -1,6 +1,6 @@
 <template>
   <div data-test="no-found">
-    <p>No films found</p>
+    <p>No photos found</p>
   </div>
 </template>
 
@@ -11,5 +11,13 @@ div {
   align-items: center;
   height: 500px;
   font-size: 55px;
+}
+@media screen and (max-width: 350px) {
+  div {
+    width: 250px;
+    height: 300px;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 </style>

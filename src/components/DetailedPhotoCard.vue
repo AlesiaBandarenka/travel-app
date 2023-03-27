@@ -13,13 +13,9 @@
               <div class="title-rate__rate"
                   data-test="test-main-card-rating">{{ contentRating }}</div>
             </div>
-            <div class="genre" data-test="test-main-card-genres">{{ showGenres }}</div>
             <div class="year-duration">
               <div class="year" data-test="test-main-card-year">
                 <p>{{ year }}</p>
-              </div>
-              <div class="duration">
-                <p data-test="test-main-card-duration">{{ movieDuration }} min</p>
               </div>
             </div>
             <div class="description">{{ storyline }}</div>
@@ -28,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, defineProps } from 'vue';
+import { defineProps } from 'vue';
 
 interface IDetailedCard {
   id: number,
@@ -41,10 +37,7 @@ interface IDetailedCard {
   storyline?: string,
 }
 
-const props = defineProps<IDetailedCard>();
-
-const showGenres = computed(() => props.genres.join(', '));
-const movieDuration = computed(() => props.duration.split('').slice(2, 5).join(''));
+defineProps<IDetailedCard>();
 
 </script>
 

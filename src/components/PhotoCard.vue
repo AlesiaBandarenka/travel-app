@@ -1,5 +1,5 @@
 <template>
-  <li key="id" class="item" data-test="test-movie-card">
+  <li key="id" class="item" data-test="test-photo-card">
     <article class="item-wrapper">
         <img
             v-lazy
@@ -11,14 +11,14 @@
             @error="imageErrorHandler"
           />
           <div class="item-description">
-              <h3 class="item-title" data-test="test-movie-title">{{ title }}</h3>
+              <h3 class="item-title" data-test="test-photo-title">{{ title }}</h3>
             <div class="item-year-city"
-            data-test="test-movie-year">
+            data-test="test-photo-year">
               <p>{{ date }}</p>
               <p>{{ city }}</p>
             </div>
           </div>
-            <p class="item-genre" data-test="test-movie-genres">{{ description }}</p>
+            <p class="item-genre" data-test="test-photo-genres">{{ description }}</p>
         </article>
     </li>
 </template>

@@ -6,12 +6,12 @@ const state = {
 };
 
 const getters = {
-  getMovies: (state) => state.all,
+  getPhotos: (state) => state.all,
 };
 
 const mutations = {
-  setMovies(state, movies) {
-    state.all = movies;
+  setPhotos(state) {
+    state.all = photos;
   },
   setSortBy(state, str: string) {
     state.sortByValue = str;
@@ -21,7 +21,7 @@ const mutations = {
 const actions = {
   fetchPhotos: async ({ commit }) => {
     const res = await photos;
-    commit('setMovies', res);
+    commit('setPhotos', res);
   },
   setSortBy(store) {
     store.commit('setSortBy');

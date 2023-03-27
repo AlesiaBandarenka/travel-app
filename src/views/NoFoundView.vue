@@ -20,7 +20,6 @@ import NoFound from '@/components/NoFound.vue';
 <style scoped>
 .background-wrapper {
   position: relative;
-  background-image: url('@/assets/background.png');
   background-size: cover;
   background-color: rgba(0,0,0,0.25);
 }

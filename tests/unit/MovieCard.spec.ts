@@ -1,28 +1,16 @@
 import { shallowMount } from '@vue/test-utils';
-import MovieCard from '@/components/MovieCard.vue';
+import PhotoCard from '@/components/PhotoCard.vue';
 
 let wrapper: any;
 
-describe('unit tests for MovieCard component', () => {
+describe('unit tests for PhotoCard component', () => {
   beforeEach(() => {
-    wrapper = shallowMount(MovieCard, {
+    wrapper = shallowMount(PhotoCard, {
       props: {
-        id: '61',
-        title: 'La La Land',
+        id: '1',
+        title: 'Просмотр мультфильма в зоопарке',
         posterurl: 'https://images-na.ssl-images-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_SY500_CR0,0,337,500_AL_.jpg',
-        year: '2008',
-        genres: [
-          'Animation',
-          'Adventure',
-          'Family',
-        ],
-      },
-      computed: {
-        showGenres: () => [
-          'Animation',
-          'Adventure',
-          'Family',
-        ].join(', '),
+        year: '2023',
       },
     });
   });
@@ -30,8 +18,8 @@ describe('unit tests for MovieCard component', () => {
   it('should initialize correctly', () => {
     expect(wrapper.vm).toBeTruthy();
   });
-  it('should MovieCard contains li', () => {
-    expect(wrapper.find('[data-test=test-movie-card]')).toBeTruthy();
+  it('should PhotoCard contains li', () => {
+    expect(wrapper.find('[data-test=test-photo-card]')).toBeTruthy();
   });
 
   it('should render li with class item', () => {
@@ -39,14 +27,10 @@ describe('unit tests for MovieCard component', () => {
   });
 
   it('should render a title', () => {
-    expect(wrapper.find('[data-test=test-movie-title]').text()).toBe('La La Land');
+    expect(wrapper.find('[data-test=test-photo-title]').text()).toBe('Просмотр мультфильма в зоопарке');
   });
 
   it('should render year', () => {
-    expect(wrapper.find('[data-test=test-movie-year]').text()).toBe('2008');
-  });
-
-  it('should render genres', () => {
-    expect(wrapper.find('[data-test=test-movie-genres]').text()).toBe('Animation, Adventure, Family');
+    expect(wrapper.find('[data-test=test-photo-year]').text()).toBe('2023');
   });
 });
