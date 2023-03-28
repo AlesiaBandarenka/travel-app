@@ -10,8 +10,8 @@ const getters = {
 };
 
 const mutations = {
-  setPhotos(state) {
-    state.all = photos;
+  setPhotos(state, photoAll) {
+    state.all = photoAll;
   },
   setSortBy(state, str: string) {
     state.sortByValue = str;
