@@ -5,7 +5,7 @@ import DetailedMovieView from '../views/DetailedMovieView.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '',
+    path: '/travel-app',
     component: HomeView,
   },
   {
