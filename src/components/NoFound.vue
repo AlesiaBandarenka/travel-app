@@ -1,6 +1,6 @@
 <template>
   <div data-test="no-found">
-    <p>No photos found</p>
+    <p>Фото не найдены</p>
   </div>
 </template>
 
