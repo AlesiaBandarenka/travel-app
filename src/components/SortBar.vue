@@ -64,7 +64,7 @@ span {
   display: flex;
   margin-right: 30px;
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 410px) {
   .sort {
     height: 120px;
   }
